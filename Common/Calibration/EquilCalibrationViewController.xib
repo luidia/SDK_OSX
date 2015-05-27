@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EquilCalibrationViewController">
+            <connections>
+                <outlet property="bgImageView" destination="TrQ-yu-GcQ" id="c4K-sp-ilg"/>
+                <outlet property="cancelBtn" destination="kNP-vF-bUw" id="HD9-Na-Q3n"/>
+                <outlet property="descLabel" destination="iy6-6b-ejG" id="xG5-Mb-zdq"/>
+                <outlet property="pointer" destination="juo-I7-CpZ" id="rnc-Uq-Utz"/>
+                <outlet property="pointer2" destination="BVA-cV-HKt" id="4Hr-Oh-oBc"/>
+                <outlet property="retryBtn" destination="OZ2-v4-HNp" id="ceb-wi-8wF"/>
+                <outlet property="titleLabel" destination="NgU-YJ-Zvb" id="QPE-mr-SS4"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="gYU-v9-L5n"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TrQ-yu-GcQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="cali_s_bot" id="F2n-sq-4l6"/>
+                </imageView>
+                <button id="kNP-vF-bUw" userLabel="Cancel">
+                    <rect key="frame" x="276" y="525" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="eq_cali_bt_01" imagePosition="only" alignment="center" imageScaling="axesIndependently" inset="2" id="zxy-Xs-ocS">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="backClick:" target="-2" id="Hk9-wI-0PO"/>
+                    </connections>
+                </button>
+                <button id="OZ2-v4-HNp" userLabel="Retry">
+                    <rect key="frame" x="232" y="525" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="eq_cali_bt_02" imagePosition="only" alignment="center" imageScaling="axesIndependently" inset="2" id="fH6-GW-ukR">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="retryClicked:" target="-2" id="f8b-9j-ZI3"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" id="NgU-YJ-Zvb" userLabel="Title label">
+                    <rect key="frame" x="-3" y="476" width="326" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="tQX-7A-Jr9">
+                        <font key="font" size="20" name="Helvetica-Light"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" id="Cwg-Uq-gYV">
+                    <rect key="frame" x="0.0" y="387" width="320" height="65"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="bmV-gm-qFV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" spellingCorrection="YES" smartInsertDelete="YES" id="iy6-6b-ejG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="320" height="65"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <attributedString key="textStorage">
+                                    <fragment content="Tap the points with lollol pen on your paper in numerical order as shown in the picture on the screen.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <size key="minSize" width="320" height="65"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="j1M-gU-gSj">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fTh-vt-3GA">
+                        <rect key="frame" x="-100" y="-100" width="15" height="65"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <imageView id="BVA-cV-HKt" userLabel="Point">
+                    <rect key="frame" x="246" y="56" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="eq_pointer_guide" id="DEU-Lk-FH7"/>
+                </imageView>
+                <imageView id="juo-I7-CpZ" userLabel="Point">
+                    <rect key="frame" x="246" y="56" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="bt_cali_point_01" id="00M-w9-QA3"/>
+                </imageView>
+            </subviews>
+            <point key="canvasLocation" x="352" y="444"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="bt_cali_point_01" width="48" height="48"/>
+        <image name="cali_s_bot" width="320" height="568"/>
+        <image name="eq_cali_bt_01" width="26.399999618530273" height="26.399999618530273"/>
+        <image name="eq_cali_bt_02" width="26.399999618530273" height="26.399999618530273"/>
+        <image name="eq_pointer_guide" width="18" height="18"/>
+    </resources>
+</document>
