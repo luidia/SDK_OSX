@@ -1,9 +1,9 @@
 //
 //  EquilCalibrationViewController.h
-//  Equil Note
+//  PenTestOSX
 //
-//  Created by Choi on 2014. 12. 4..
-//  Copyright (c) 2014년 choi. All rights reserved.
+//  Created by Luidia on 2019
+//  Copyright © 2019년 Luidia. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

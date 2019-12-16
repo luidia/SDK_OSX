@@ -1,9 +1,9 @@
 //
 //  CalibWindowController.h
-//  UltraNoteMac
+//  PenTestOSX
 //
-//  Created by choi on 8/29/13.
-//  Copyright (c) 2013 choi. All rights reserved.
+//  Created by Luidia on 2019
+//  Copyright © 2019년 Luidia. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

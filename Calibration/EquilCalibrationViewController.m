@@ -1,9 +1,9 @@
 //
 //  EquilCalibrationViewController.m
-//  Equil Note
+//  PenTestOSX
 //
-//  Created by Choi on 2014. 12. 4..
-//  Copyright (c) 2014년 choi. All rights reserved.
+//  Created by Luidia on 2019
+//  Copyright © 2019년 Luidia. All rights reserved.
 //
 
 #import "EquilCalibrationViewController.h"
@@ -47,7 +47,7 @@ enum CaliType {
 @synthesize mainWindowCtr;
 
 -(void) dealloc {
-    if (m_PenController && m_PenController.modelCode == EquilSmartMarker) {
+    if (m_PenController && (m_PenController.modelCode == EquilSmartMarker || m_PenController.modelCode == EquilSmartMarkerBLE)) {
         [m_PenController StartReadQ];
     }
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"PNF_PEN_READ_DATA" object:nil];
@@ -91,7 +91,7 @@ enum CaliType {
 {
     count = 0;
     calPointCnt = 2;
-    if (m_PenController.modelCode == 4) {
+    if (m_PenController.modelCode == 4 || m_PenController.modelCode == 5) {
         NSString* desc = [NSString stringWithFormat:@"%@", @"On your writing surface, use the [MODEL] to tap the points in order, as shown in the picture."];
         desc = [desc stringByReplacingOccurrencesOfString:@"[MODEL]" withString:@"Equil Smartmarker"];
         [descLabel setString:desc];
@@ -229,7 +229,7 @@ enum CaliType {
                 SMPenFlag :(int) Arg_SMPenFlag SMPenState:(int) Arg_SMPenState
                   Pressure:(int) Arg_pressure
 {
-    if (m_PenController.modelCode == 4) {
+    if (m_PenController.modelCode == 4 || m_PenController.modelCode == 5) {
         int smFlag = (Arg_SMPenFlag & 0x01);
         if (smFlag == 0)
             return;
